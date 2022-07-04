@@ -1,4 +1,4 @@
-FUNCTION insertionsort(arr:ARRAY_OF integer[n]) 
+FUNCTION insertionsort(arr:ARRAY_OF integer[n]) :integer
 VAR
     n,i,j:=integer;
    
@@ -18,7 +18,8 @@ END_FOR
 
     RETURN arr ;
 END
-FUNCTION binary_search(arr:ARRAY_OFINTEGER)
+///////////////////////////////////////////////////////////////////////////
+FUNCTION binary_search(arr:ARRAY_OFINTEGER):integer
 VAR
 left,right,mid:integer;
 BEGIN
@@ -39,6 +40,7 @@ END_IF
 END_WHILE
 RETURN -1 .
 END
+/////////////////////////////////////////////////////////////////////////////
 ALGORITHM Test
 VAR
     arr,arr1
@@ -55,3 +57,4 @@ BEGIN
     binary_search(arr);
 
 END
+//////////////////////////////////////////////////////////////////////////
