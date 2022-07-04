@@ -1,0 +1,57 @@
+FUNCTION insertionsort(arr:ARRAY_OF integer[n]) 
+VAR
+    n,i,j:=integer;
+   
+BEGIN
+i:=0;
+j:=0;
+n:=arr.length-1;
+    FOR i FROM 1  TO n STEP 1  DO
+     FOR j  FROM 0 TO i-1 STEP -1  DO
+     IF(arr[j-1]>arr[j]) THEN
+     swap(arr[j-1],arr[j]);
+ELSE
+break;
+END_IF
+END_FOR
+END_FOR
+
+    RETURN arr ;
+END
+FUNCTION binary_search(arr:ARRAY_OFINTEGER)
+VAR
+left,right,mid:integer;
+BEGIN
+left:=0;
+right:=arr.length-1;
+WHILE (left<right) DO
+    mid:=left+(right-left)/2
+END_WHILE
+IF(arr[mid]=x)THEN
+RETURN mid;
+END_IF
+IF(arr[mid]<x)THEN
+left:=mid+1;
+ELSE
+right:=mid-1;
+
+END_IF
+END_WHILE
+RETURN -1 .
+END
+ALGORITHM Test
+VAR
+    arr,arr1
+BEGIN
+ write("écrire votre array");
+ read(arr);
+ insertionsort(arr);
+ write("écrire votre array");
+ read(arr1);
+
+    write("donner moi  l'index de la valeur qui veut le chercher ")
+    read(i);
+    x:=arr1[i];
+    binary_search(arr);
+
+END
